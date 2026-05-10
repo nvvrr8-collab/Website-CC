@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesar Circle | Frontend Skills & Architecture</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --color-onyx: #0A0A0A;
+            --color-charcoal: #111111;
+            --color-dark-slate: #1A1A1A;
+            --color-white: #FFFFFF;
+            --color-electric-blue: #2563EB;
+            --color-silver-gray: #A1A1AA;
+
+            --font-heading: 'Merriweather', serif;
+            --font-body: 'Merriweather', serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-onyx);
+            color: var(--color-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-size: 0.95rem;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--color-white);
+            margin-bottom: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navbar */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 20px;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--color-silver-gray);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-electric-blue);
+        }
+
+        /* Page Content */
+        .page-header {
+            padding: 150px 20px 80px;
+            text-align: center;
+            background: linear-gradient(135deg, #0A0A5A 0%, #1A1A1A 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+        }
+
+        .page-header p {
+            color: var(--color-silver-gray);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .skill-section {
+            margin-bottom: 80px;
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .skill-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .skill-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid var(--color-electric-blue);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--color-electric-blue);
+            flex-shrink: 0;
+        }
+
+        .skill-content h2 {
+            font-size: 2rem;
+            color: var(--color-electric-blue);
+        }
+
+        .skill-content p {
+            color: var(--color-silver-gray);
+            margin-bottom: 20px;
+        }
+
+        .tech-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--color-silver-gray);
+        }
+
+        @media (max-width: 768px) {
+
+            .skill-section,
+            .skill-section:nth-child(even) {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="Asset 49.png" alt="Cesar Circle Logo" style="width: 32px; height: 32px; filter: brightness(0) invert(1);">
+                Cesar Circle
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-arrow-left"></i> Back to Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>Frontend Mastery</h1>
+        <p>A deep dive into the architecture, animations, and methodologies I use to build scalable web applications.
+        </p>
+    </div>
+
+    <div class="container">
+        <!-- Architecture -->
+        <div id="architecture" class="skill-section">
+            <div class="skill-icon">
+                <i class="fas fa-layer-group"></i>
+            </div>
+            <div class="skill-content">
+                <h2>Advanced UI Architecture</h2>
+                <p>Modern web applications require a robust foundation. I specialize in building component-driven
+                    architectures that scale. By utilizing modular design patterns, state management libraries, and
+                    strict typed systems, I ensure that codebases remain maintainable even as they grow in complexity.
+                </p>
+                <p>My approach separates logic from presentation, creating reusable atomic components that speed up
+                    development cycles and enforce design consistency across the entire application.</p>
+                <div class="tech-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Next.js</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Redux / Zustand</span>
+                    <span class="tag">TailwindCSS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Animations -->
+        <div id="animations" class="skill-section">
+            <div class="skill-icon">
+                <i class="fas fa-magic"></i>
+            </div>
+            <div class="skill-content">
+                <h2>High-Performance Animations</h2>
+                <p>Animations shouldn't just look good—they should perform flawlessly at 60fps without draining device
+                    battery. I leverage hardware-accelerated CSS transforms and specialized animation libraries to
+                    create fluid, physics-based micro-interactions.</p>
+                <p>From complex scroll-linked animations using Intersection Observers to subtle button hover states, I
+                    focus on motion that enhances the user experience rather than distracting from it.</p>
+                <div class="tech-tags">
+                    <span class="tag">Framer Motion</span>
+                    <span class="tag">GSAP</span>
+                    <span class="tag">Three.js</span>
+                    <span class="tag">CSS Keyframes</span>
+                    <span class="tag">WebGL</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Responsive -->
+        <div id="responsive" class="skill-section">
+            <div class="skill-icon">
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="skill-content">
+                <h2>Pixel-Perfect Responsive Design</h2>
+                <p>Building for the web means building for an infinite number of screen sizes. I utilize a mobile-first
+                    approach, employing fluid typography, CSS Grid, and responsive Flexbox layouts to guarantee that
+                    applications look stunning on a 4K monitor, a tablet, or a mobile phone.</p>
+                <p>I pay meticulous attention to touch targets, responsive image loading for performance, and layout
+                    shifts (CLS) to ensure a premium feel on every device.</p>
+                <div class="tech-tags">
+                    <span class="tag">CSS Grid / Flexbox</span>
+                    <span class="tag">Fluid Typography</span>
+                    <span class="tag">Mobile-First</span>
+                    <span class="tag">Core Web Vitals</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Cesar Circle – Modern Web Design Studio</p>
+    </footer>
+</body>
+
+</html>

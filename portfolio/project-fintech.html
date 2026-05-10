@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesar Circle | Fintech Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --color-bg: #0A0A0A;
+            --color-accent: #2563EB;
+            --color-text: #FFFFFF;
+            --color-muted: #A1A1AA;
+            
+            --font-heading: 'Merriweather', serif;
+            --font-body: 'Merriweather', serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        .navbar {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero {
+            padding: 100px 40px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(37, 99, 235, 0.15) 0%, #0A0A0A 60%);
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: var(--color-muted);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .project-mockup {
+            max-width: 900px;
+            margin: -50px auto 100px;
+            background: #111;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-mockup::before {
+            content: 'Fintech UI Presentation';
+            font-family: 'Montserrat', sans-serif;
+            color: var(--color-muted);
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            max-width: 1000px;
+            margin: 0 auto 100px;
+            padding: 0 40px;
+        }
+
+        .sidebar h3 {
+            color: var(--color-accent);
+            margin-bottom: 15px;
+            font-family: var(--font-heading);
+        }
+
+        .sidebar p, .sidebar li {
+            color: var(--color-muted);
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .main-content h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            margin-bottom: 20px;
+            color: var(--color-muted);
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--color-muted);
+        }
+
+        @media (max-width: 768px) {
+            .details-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="Asset 49.png" alt="Cesar Circle Logo" style="width: 32px; height: 32px; filter: brightness(0) invert(1);">
+            Cesar Circle
+        </a>
+        <a href="index.html" style="color: var(--color-muted);"><i class="fas fa-arrow-left"></i> Back</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Fintech Landing Page</h1>
+        <p>A high-converting, trust-building web experience designed for a modern financial technology startup.</p>
+    </div>
+
+    <div class="project-mockup">
+        <!-- Abstract Mockup Visual -->
+    </div>
+
+    <div class="details-grid">
+        <div class="sidebar">
+            <h3>Client</h3>
+            <p>FinTech Innovators LLC</p>
+            
+            <h3>Role</h3>
+            <p>Lead Frontend Developer</p>
+            
+            <h3>Tech Stack</h3>
+            <ul>
+                <li>React.js</li>
+                <li>TailwindCSS</li>
+                <li>Framer Motion</li>
+            </ul>
+            
+            <h3>Links</h3>
+            <a href="#" style="color: var(--color-text); text-decoration: underline;">Live Site <i class="fas fa-external-link-alt"></i></a>
+        </div>
+        
+        <div class="main-content">
+            <h2>The Challenge</h2>
+            <p>The client needed a landing page that immediately established trust while explaining a complex financial product in simple terms. The previous site suffered from a high bounce rate due to slow loading speeds and a confusing mobile experience.</p>
+            
+            <h2>The Solution</h2>
+            <p>I architected a new frontend from the ground up using React and TailwindCSS. By implementing lazy loading and optimizing the critical rendering path, the initial page load time was reduced by 60%.</p>
+            <p>To explain the product, I integrated smooth, scroll-linked animations using Framer Motion that visually demonstrated the data flow, making the abstract financial concepts tangible and easy to understand.</p>
+            
+            <h2>The Results</h2>
+            <p>Post-launch analytics showed a 24% increase in the conversion rate for demo sign-ups, and the mobile bounce rate dropped significantly. The clean, modern aesthetic helped position the startup as a premium, reliable service in the fintech space.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Cesar Circle – Modern Web Design Studio</p>
+    </footer>
+</body>
+</html>

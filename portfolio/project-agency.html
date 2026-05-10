@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nour Ashraf | Creative Agency Site</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --color-bg: #111111;
+            --color-accent: #7C3AED;
+            --color-text: #F3F4F6;
+            --color-muted: #9CA3AF;
+
+            --font-heading: 'Merriweather', serif;
+            --font-body: 'Merriweather', serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.8;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .navbar {
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero {
+            padding: 120px 50px;
+            text-align: left;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 4.5rem;
+            margin-bottom: 30px;
+            line-height: 1.1;
+            color: var(--color-accent);
+        }
+
+        .hero p {
+            color: var(--color-muted);
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin-bottom: 50px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto 100px;
+            padding: 0 50px;
+        }
+
+        .gallery-img {
+            background: #1A1A1A;
+            border-radius: 8px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-muted);
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+            border: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        .gallery-img.large {
+            grid-column: 1 / -1;
+            height: 600px;
+        }
+
+        .content-block {
+            max-width: 800px;
+            margin: 0 auto 100px;
+            padding: 0 50px;
+        }
+
+        .content-block h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--color-text);
+        }
+
+        .content-block p {
+            font-size: 1.2rem;
+            color: var(--color-muted);
+            margin-bottom: 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px;
+            background: #0A0A0A;
+            color: var(--color-muted);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-img.large {
+                height: 300px;
+            }
+
+            .gallery-img {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="Asset 49.png" alt="Cesar Circle Logo" style="width: 32px; height: 32px; filter: brightness(0) invert(1);">
+            Cesar Circle
+        </a>
+        <a href="index.html" style="color: var(--color-text); font-weight: 500;">Return to Portfolio <i
+                class="fas fa-arrow-right"></i></a>
+    </nav>
+
+    <div class="hero">
+        <h1>Creative Agency Portfolio</h1>
+        <p>A highly interactive, WebGL-powered digital experience designed to showcase an award-winning design studio's
+            work.</p>
+
+        <div style="display: flex; gap: 40px; margin-top: 60px;">
+            <div>
+                <strong
+                    style="color: var(--color-accent); display: block; margin-bottom: 5px; font-family: 'Montserrat', sans-serif;">Client</strong>
+                <span style="color: var(--color-text);">Studio Vision</span>
+            </div>
+            <div>
+                <strong
+                    style="color: var(--color-accent); display: block; margin-bottom: 5px; font-family: 'Montserrat', sans-serif;">Services</strong>
+                <span style="color: var(--color-text);">Frontend, WebGL, Motion</span>
+            </div>
+            <div>
+                <strong
+                    style="color: var(--color-accent); display: block; margin-bottom: 5px; font-family: 'Montserrat', sans-serif;">Year</strong>
+                <span style="color: var(--color-text);">2025</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-img large">Homepage WebGL Hero Concept</div>
+        <div class="gallery-img">Case Study Grid Layout</div>
+        <div class="gallery-img">Interactive Menu Overlay</div>
+    </div>
+
+    <div class="content-block">
+        <h2>Pushing the Boundaries of the Web</h2>
+        <p>Studio Vision required a portfolio that didn't just display their work, but was a piece of art in itself. The
+            goal was to create an immersive, fluid experience that felt more like a native application than a
+            traditional website.</p>
+        <p>I utilized <strong>Three.js</strong> and custom GLSL shaders to build an interactive, fluid-like distortion
+            effect on the hero typography that responds to cursor movement. The page transitions were seamlessly
+            orchestrated using <strong>GSAP</strong> (GreenSock Animation Platform), ensuring that users never
+            experience a harsh page reload.</p>
+        <p>Despite the heavy graphics, performance was paramount. Through aggressive asset optimization, texture
+            compression, and dynamic imports, the site maintains a perfect 60fps on both desktop and mobile devices.</p>
+    </div>
+
+    <footer>
+        <p>© 2026 Cesar Circle – Modern Web Design Studio</p>
+    </footer>
+</body>
+
+</html>
